@@ -1,0 +1,152 @@
+@use "../../abstracts/" as *;
+@use "sass:color" as *;
+
+.hero {
+    @include flex($direction: column, $justify: space-between);
+    background-color: $background-color;
+    font-family: $primary-font;
+    max-width: $mobile;
+    padding-top: 1.5rem;
+
+    .hero-content {
+        width: 100%;
+        padding: 0 1rem;
+        .tagline {
+            color: $secondly-color;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 8rem;
+                height: 0.1rem;
+                background-color: $secondly-color;
+                margin-left: 1rem;
+                vertical-align: middle;
+                @media screen and (max-width: 300px) {
+                    width: 5rem;
+                }
+            }
+        }
+        h3 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1.8;
+            color: $primary-color;
+            margin-bottom: 1rem;
+        
+            span {
+                color: $secondly-color;
+            }
+        }
+        .description {
+            color: adjust($primary-color, $lightness: 40%);
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+        .cta {
+            padding: 1.2rem 2rem;
+            background-color: $button-bg;
+            color: $background-color;
+            border: none;
+            border-radius: 0.75rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+    
+            &:hover {
+                background-color: adjust($button-bg, $lightness: -10%);
+            }
+        }
+    }
+    .tutor-section {
+        padding: 0 1rem;
+        object-fit: contain;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+@include tablet {
+    .hero {
+        margin: 0 auto;
+        @include flex($direction: row, $justify: center);
+        padding: 2rem 1rem;
+        max-width: $tablet;
+        .hero-content {
+            width: 45%;
+            padding: 0 1rem;
+            .tagline {
+                font-size: 1rem;
+            }
+            h3 {
+                font-size: 2.5rem;
+                line-height: 1.5;
+            }
+            .description {
+                font-size: 1rem;
+                margin: 1rem 0;
+                line-height: 1.6;
+                max-width: 90%;
+            }
+            .cta {
+                padding: 1.1rem 3.5rem;
+            }
+        }
+        .tutor-section {
+            width: 55%;
+            padding: 0;
+            @include flex($direction: column, $justify: center);
+            img {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .hero {
+        @include flex($direction: row, $justify: space-between);
+        min-width: $extra-lager;
+        margin: 0 auto; 
+        column-gap: 2rem;
+        padding-top: 3rem;
+        min-height: 43.75rem;
+        .hero-content {
+            width: 50%;
+            padding-top: 2rem;
+            .tagline {
+                font-size: 1rem;
+            }
+            h3 {
+                font-size: 2.5rem;
+                line-height: 1.8;
+            }
+            .description {
+                margin: 1rem 0;
+                line-height: 1.4;
+                max-width: 90%;
+            }
+            .cta {
+                padding: 1.1rem 4.3rem;
+            }
+        }
+        .tutor-section {
+            width: 50%;
+            padding: 0;
+            @include flex($direction: column, $justify: center, $align:center);
+            img {
+                width: 100%;
+                margin-top: -30%;
+            }
+        }
+    }
+}

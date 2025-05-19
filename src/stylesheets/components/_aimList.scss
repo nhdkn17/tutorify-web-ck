@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+@use "sass:color" as *;
+
+.aim-item {
+    @include flex($justify: center, $align: center);
+    color: $primary-color;
+    font-family: $primary-font;
+    background-color: $background-color;
+    max-width: 500px;
+    height: auto;
+    gap: 2rem;
+    border-radius: 16px;
+    margin: 1rem;
+    padding-left: 1rem;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: adjust($background-color, $lightness: -10%);
+        transform: translateY(-0.3125rem);
+        box-shadow: 0 0.625rem 1.25rem adjust($primary-color, $lightness: 70%);
+    }
+
+    .aim-item-icon {
+        width: 24px;
+        height: 24px;
+        margin-top: -10%;
+
+        figure {
+            width: 100%;
+        }
+    }
+    .aim-item-content {
+        @include flex($direction: column, $justify: center);
+        padding: 1rem;
+        .content-title {
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .content-description {
+            color: adjust($primary-color, $lightness: 40%);
+            font-size: 0.8rem;
+            list-style: disc;
+            line-height: 1.5;
+            margin-left: 1rem;
+            span {
+                color: $button-bg;
+                font-weight: 300;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,190 @@
+@use "../../abstracts/" as *;
+@use "sass:color" as *;
+
+.about {
+    @include flex($direction: column, $justify: space-between);
+    background-color: $background-color;
+    font-family: $primary-font;
+    max-width: $mobile;
+    padding: 1rem;
+
+    .container {
+        width: 100%;
+        @include flex($direction: column, $justify: space-between);
+        gap: 1rem;
+        .about-content {
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 1.5;
+                margin-bottom: 1.6rem;
+            }
+            .description {
+                font-size: 1rem;
+                color: adjust($primary-color, $lightness: 40%);
+                line-height: 1.8;
+            }
+        }
+        .about-comment {
+            @include flex($justify: space-between);
+            gap: 1rem;
+            .suround-right {
+                @include flex($direction: column, $justify: center);
+                .suround-container {
+                    @include flex;
+                    width: 100%;
+                    height: auto;
+                    .content {
+                        @include flex($direction: column);
+                        width: 70%;
+                        row-gap: 1rem;
+                        padding: 1rem;
+                        border-radius: 0.7rem;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        &:hover {
+                            background-color: adjust($background-color, $lightness: -10%);
+                            transform: translateY(-0.3125rem);
+                            box-shadow: 0 0.625rem 1.25rem adjust($primary-color, $lightness: 70%);
+                        }
+                        .star-list ul {
+                            @include flex;
+                        }
+                        .description {
+                            font-size: 1rem;
+                            font-style: italic;
+                            color: adjust($primary-color, $lightness: 40%);
+                            line-height: 1.8;
+                            margin-bottom: 1rem;
+                        }
+                        .personal-cmt {
+                            @include flex($align: center);
+                            column-gap: 1rem;
+                            object-fit: contain;
+                            figure img:hover {
+                                cursor: pointer;
+                            }
+                            .info {
+                                width: 100%;
+                                .name {
+                                    font-size: 1rem;
+                                    object-fit: contain;
+                                    max-width: 10rem;
+                                    &:hover {
+                                        font-weight: 700;
+                                        cursor: pointer;
+                                    }
+                                }
+                                .job {
+                                    font-size: 0.7rem;
+                                    color: adjust($primary-color, $lightness: 40%);
+                                }
+                            }
+                        }
+                    }
+                    .icon {
+                        width: 30%;
+                        height: auto;
+                        margin-top: 7.6rem;
+                        margin-left: -4rem;
+                        object-fit: contain;
+                        img {
+                            &:hover {
+                                cursor: pointer;
+                                filter: drop-shadow(0 0 0.5rem $secondly-color);
+                            }
+                        }
+                    }
+                }
+                .star-list ul {
+                    @include flex;
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .about {
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        max-width: $tablet;
+        .container {
+            @include flex($direction: row, $justify: center);
+            .about-content {
+                h3 {
+                    font-size: 2.25rem;
+                }
+            }
+            .about-comment {
+                .suround-right {
+                    .suround-container {
+                        .content {
+                            width: 80%;
+                            .description {
+                                font-size: 1rem;
+                                line-height: 1.8;
+                            }
+                            .personal-cmt {
+                                .info {
+                                    .name {
+                                        font-size: 1.2rem;
+                                        margin-bottom: 1rem;
+                                    }
+                                    .job {
+                                        font-size: 0.9rem;
+                                    }
+                                }
+                            }
+                        }
+                        .icon {
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop {
+    .about {
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        min-width: $extra-lager;
+        .container {
+            @include flex($direction: row, $justify: center);
+            .about-content {
+                h3 {
+                    font-size: 2.5rem;
+                }
+            }
+            .about-comment {
+                .suround-right {
+                    .suround-container {
+                        .content {
+                            width: 80%;
+                            .description {
+                                font-size: 1rem;
+                                line-height: 1.8;
+                            }
+                            .personal-cmt {
+                                .info {
+                                    .name {
+                                        font-size: 1.4rem;
+                                        margin-bottom: 0.8rem;
+                                    }
+                                    .job {
+                                        font-size: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                        .icon {
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

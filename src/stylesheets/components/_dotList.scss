@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.dot-item {
+    list-style: none;
+    margin-right: 1rem;
+    width: 0.5rem;
+    figure img {
+        width: 100%;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.3);
+        }
+    }
+}

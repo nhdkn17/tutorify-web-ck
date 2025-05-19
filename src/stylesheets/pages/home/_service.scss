@@ -1,0 +1,119 @@
+@use "../../abstracts" as *;
+@use "sass:color" as *;
+
+.service {
+    @include flex($direction: column, $justify: space-between);
+    background-color: $background-color;
+    color: $primary-color;
+    font-family: $primary-font;
+    max-width: $mobile;
+    padding: 1rem;
+
+    .container {
+        width: 100%;
+        @include flex($direction: column, $justify: center, $align: center);
+        
+        .container-content {
+            @include flex($direction: column, $justify: center, $align: center);
+            row-gap: 1rem;
+            .text-content {
+                h3 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.2;
+                    margin-bottom: 1rem;
+                    text-align: center;
+
+                    span {
+                        color: $button-bg;
+                    }
+                }
+                .description {
+                    font-size: 1rem;
+                    color: adjust($primary-color, $lightness: 40%);
+                    line-height: 1.8;
+                    text-align: right;
+                }
+            }
+            .aim-content {
+                background: radial-gradient(
+                    circle at center,
+                    $bg-color-circle-1,
+                    $background-color
+                );
+                padding: 0 1rem 1rem 1rem;
+            }
+        }
+        .container-img {
+            @include flex($justify: center, $align: center);
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .service {
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        max-width: $tablet;
+        .container {
+            @include flex($direction: row, $justify: center);
+            .container-content {
+                width: 50%;
+                order: 2;
+                .text-content {
+                    h3 {
+                        font-size: 2.25rem;
+                        text-align: left;
+                    }
+                    .description {
+                        text-align: left;
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .container-img {
+                width: 50%;
+                order: 1;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .service {
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        min-width: $extra-lager;
+        .container {
+            @include flex($direction: row, $justify: center);
+            .container-content {
+                width: 60%;
+                order: 2;
+                .text-content {
+                    h3 {
+                        font-size: 2.5rem;
+                        line-height: 1.5;
+                        text-align: left;
+                    }
+                    .description {
+                        text-align: left;
+                        font-size: 1.2rem;
+                        line-height: 2;
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .container-img {
+                width: 40%;
+                order: 1;
+            }
+        }
+    }
+}

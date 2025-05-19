@@ -1,0 +1,13 @@
+<each loop="item in {{list}}">
+    <li class="aim-item">
+        <div class="aim-item-icon">
+            <figure>
+                <img src="../assets/icons/Tick Square.svg" alt="Tick icon">
+            </figure>
+        </div>
+        <div class="aim-item-content">
+            <p class="content-title">{{item.contentA}}</p>
+            <ul><li class="content-description">{{item.contentB}} <span>read more</span></li></ul>
+        </div>
+    </li>
+</each>

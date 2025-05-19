@@ -1,0 +1,19 @@
+// font-family
+$primary-font: Poppins;
+
+// Breakpoints
+$medium: 768px;
+$extra-lager: 1200px;
+
+$mobile: calc($medium - 1px);
+$tablet: calc($extra-lager - 1px);
+
+// Colors
+$primary-color: #000000;
+$secondly-color: #fb9c46;
+$background-color: #ffffff;
+$text-color: #fb9c46;
+$button-bg: #058E6E;
+$bg-color-circle-1: #ddf5ee;
+$bg-color-circle-2: #f4f3dd;
+$bg-footer: #F2BF62;

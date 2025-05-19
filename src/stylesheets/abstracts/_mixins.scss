@@ -1,0 +1,51 @@
+@use "variables" as *;
+
+// Media-Query Mixin
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $medium) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $extra-lager) {
+    @content;
+  }
+}
+
+// Flex
+@mixin flex(
+  $display: flex,
+  $direction: false,
+  $align: false,
+  $justify: false,
+  $wrap: false
+) {
+  display: $display;
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $align {
+    align-items: $align;
+  }
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+}
+
+// Background image
+@mixin bg-img($bg: "") {
+  background-image: url($bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

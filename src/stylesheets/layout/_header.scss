@@ -1,0 +1,155 @@
+@use "../abstracts/" as *;
+@use "sass:color" as *;
+
+.header-main {
+  background-color: $background-color;
+  padding: 1rem 0;
+  position: relative;
+  font-family: $primary-font;
+  
+  .container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: $mobile;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    border-bottom: 0.125rem solid #0000001a;
+
+    .header-inner {
+      @include flex($justify: space-between, $align: center);
+      width: 100%;
+      position: relative;
+
+      .header-logo {
+        text-decoration: none;
+        h1 {
+          font-size: 2.2rem;
+          font-weight: 900;
+          color: $primary-color;
+        }
+      }
+
+      .right-float {
+        display: none;
+  
+        .header-auth {
+          gap: 0.5rem;
+      
+          button {
+            width: 6.25rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: $primary-font;
+            color: white;
+          }
+      
+          .header-auth-login {
+            background-color: $button-bg;
+      
+            &:hover {
+              background: adjust($button-bg, $lightness: -10%);
+            }
+          }
+      
+          .header-auth-signup {
+            background-color: $secondly-color;
+    
+            &:hover {
+              background: adjust($secondly-color, $lightness: -10%);
+            }
+          }
+        }
+      }
+
+      .header-menu-item { 
+        display: block; 
+      }
+    }
+  }
+
+  @include tablet {
+    .container {
+      max-width: $tablet;
+      margin: 0 auto;
+
+      .header-inner {
+        @include flex($justify: space-between, $align: center);
+        .right-float {
+          @include flex();
+          display: block;
+          @include flex($justify: flex-end, $align: center);
+          gap: 1.5rem;
+          .header-nav {
+            display: block;
+            width: auto;
+    
+            .nav-ul {
+              display: flex;
+              justify-content: right;
+              gap: 1rem;
+        
+              .header-nav-item {
+                border-bottom: none;
+                .header-nav-link {
+                  font-size: 1rem;
+                  padding: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+        .header-logo {
+          font-size: 1.75rem;
+        }
+        .header-menu-item {
+          display: none;
+        }
+      }
+    }
+  }
+    
+  @include desktop { 
+    .container {
+      min-width: $extra-lager;
+      margin: 0 auto;
+
+      .header-inner {
+        gap: 3rem;
+        .right-float {
+          @include flex();
+          gap: 2rem;
+          display: block;
+          @include flex($justify: flex-end, $align: center);
+          .header-nav {     
+            .nav-ul {
+              display: flex;
+              gap: 1.5rem;
+        
+              .header-nav-item {
+                border-bottom: none;
+                .header-nav-link {
+                  padding: 0.5rem;
+                }
+              }
+            }
+          }
+          .header-auth {
+            display: flex;
+            gap: 2.3rem;
+          }
+        }
+
+        .header-menu-item {
+          display: none;
+        }
+
+        .header-logo {
+          font-size: 2rem;
+        }
+      } 
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@use "../../abstracts" as *;
+@use "sass:color" as *;
+
+.landing {
+    @include flex($direction: column, $justify: space-between);
+    font-family: $primary-font;
+    max-width: $mobile;
+    color: $background-color;
+    min-height: 25rem;
+    background: linear-gradient(to bottom, $secondly-color, scale($secondly-color, $lightness: 10%));
+    border-radius: 1rem;
+    .container {
+        width: 100%;
+        @include flex($direction: column, $justify: center);
+        gap: 1rem;
+        padding: 4rem 1rem;
+        background-image: url('/src/assets/images/Group-42.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        .landing-content {
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 1.5;
+                margin-bottom: 1.6rem;
+                span {
+                    text-shadow: 0.0625rem 0.0625rem 0.5rem $background-color;
+                }
+            }
+            .description {
+                font-size: 1rem;
+                line-height: 1.8;
+                margin-bottom: 1rem;
+            }
+            .icon-face {
+                @include flex($align: center);
+                gap: 1rem;
+                &:hover {
+                    cursor: pointer;
+                }
+                .other {
+                    text-decoration: underline;
+                    &:hover {
+                        cursor: pointer;
+                        color: $bg-color-circle-2;
+                    }
+                }
+            }
+        }
+        .landing-button {
+            min-height: 8rem;
+            @include flex($align: center);
+            button {
+                padding: 1.5rem 2rem;
+                color: $text-color;
+                font-size: 1rem;
+                font-weight: 600;
+                border-radius: 0.5rem;
+                &:hover {
+                    cursor: pointer;
+                    background-color: adjust($background-color, $lightness: -20%);
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .landing {
+        margin: 3rem auto;
+        padding: 2rem 1rem;
+        max-width: $tablet;
+        .container {
+            @include flex($direction: row, $justify: space-between, $align: center);
+            .landing-content {
+                width: 50%;
+                h3 {
+                    font-size: 2.25rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+            .landing-button {
+                @include flex($justify: flex-end, $align: center);
+                width: 50%;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .landing {
+        margin: 5rem auto;
+        padding: 4rem 2rem;
+        min-width: $extra-lager;
+        .container {
+            @include flex($direction: row, $justify: center);
+            .landing-content {
+                width: 50%;
+                h3 {
+                    font-size: 2.5rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+            .landing-button {
+                @include flex($justify: flex-end, $align: center);
+                width: 50%;
+            }
+        }
+    }
+}
