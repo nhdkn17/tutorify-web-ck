@@ -1,0 +1,143 @@
+@use "../../abstracts" as *;
+@use "sass:color" as *;
+
+.lessons {
+    padding: 2rem 1rem;
+    background-color: $background-color;
+    margin: 0 auto;
+    @include tablet {
+        padding: 3rem 2rem;
+    }
+    @include desktop {
+        padding: 3rem 2rem;
+    }
+    .container {
+        max-width: $mobile;
+        margin: 0 auto;
+        @include tablet {
+            max-width: $tablet;
+        }
+        @include desktop {
+            min-width: $extra-lager;
+        }
+        .lessons-title {
+            font-size: 1.5rem;
+            text-align: center;
+            color: $primary-color;
+            margin-bottom: 1.5rem;
+            @include tablet {
+                font-size: 2rem;
+            }
+            @include desktop {
+                font-size: 2rem;
+            }
+        }
+        .lessons-list {
+            @include flex($direction: column, $justify: center, $align: center);
+            gap: 1rem;
+            @include tablet {
+                @include flex($direction: row, $justify: space-between, $wrap: wrap);
+            }
+            @include desktop {
+                @include flex($direction: row, $justify: flex-start, $wrap: wrap);
+            }
+            .lesson-card {
+                width: 100%;
+                background-color: adjust($background-color, $lightness: -3%);
+                border: 1px solid $secondly-color;
+                border-radius: 8px;
+                padding: 1rem;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: translateY(-5px);
+                }
+                iframe {
+                    display: none;
+                }
+                .card-title {
+                    font-size: 1.25rem;
+                    color: $primary-color;
+                    margin-bottom: 0.5rem;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .card-description {
+                    font-size: 0.85rem;
+                    line-height: 1rem;
+                    color: adjust($primary-color, $lightness: 40%);
+                    margin-bottom: 1rem;
+                }
+                .card-button {
+                    background-color: $button-bg;
+                    color: $background-color;
+                    width: 6rem;
+                    text-align: center;
+                    padding: 0.5rem;
+                    font-size: 0.9rem;
+                    border-radius: 0.4rem;
+                    float: right;
+                    transition: background-color .5s ease;
+                    &:hover {
+                        cursor: pointer;
+                        background-color: adjust($button-bg, $lightness: -10%);
+                    }
+                }
+            }          
+        }
+        .pagination {
+            @include flex($justify: center);
+            margin-top: 2rem;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            button {
+                padding: 0.5rem 0.8rem;
+                background-color: $background-color;
+                color: $primary-color;
+                border: 1px solid $primary-color;
+                border-radius: 0.25rem;
+                &.active {
+                    background-color: $primary-color;
+                    color: $background-color;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: $bg-color-circle-2;
+                }
+            }
+        } 
+    }
+}
+.lesson-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    @include flex($justify: center, $align: center);
+    z-index: 999;
+    .lesson-modal-content {
+        background-color: $background-color;
+        color: $primary-color;
+        padding: 2rem;
+        border-radius: 1rem;
+        max-width: 627px;
+        height: auto;
+        width: 90%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        position: relative;
+        .close-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+            color: adjust($primary-color, $lightness: 20%);
+        }
+    }
+}
+.lesson-modal.hidden {
+    display: none;
+} 

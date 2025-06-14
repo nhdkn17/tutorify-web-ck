@@ -1,0 +1,370 @@
+<main>
+    <!-- Start of Learning path section -->
+    <section class="learning-path">
+        <h2 class="learning-path-title">Language learning roadmap</h2>
+        <div class="learning-path-steps">
+            <div class="step-card">
+                <div class="step-card-number">01</div>
+                <h3 class="step-card-title">Beginner</h3>
+                <p class="step-card-desc">Get familiar with the language and basic vocabulary.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-card-number">02</div>
+                <h3 class="step-card-title">Intermediate</h3>
+                <p class="step-card-desc">Improve grammar and communication.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-card-number">03</div>
+                <h3 class="step-card-title">Advanced</h3>
+                <p class="step-card-desc">Advanced discussion and writing.</p>
+            </div>
+        </div>
+    </section>     
+    <!-- End of Learning path section -->
+    <!-- Start of Filter area -->
+    <section class="filter-area">
+        <h2 class="filter-area-title">Search for courses</h2>
+        <form class="filter-area-form">
+            <div class="group">
+                <div class="filter-area-group">
+                    <label for="language">Language</label>
+                    <select id="language" name="language">
+                        <option value="">All</option>
+                        <option value="english">English</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="korean">Korean</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="german">German</option>
+                        <option value="italian">Italian</option>
+                        <option value="arabic">Arabic</option>
+                        <option value="russian">Russian</option>
+                    </select>
+                </div>
+                <div class="filter-area-group">
+                    <label for="level">Level</label>
+                    <select id="level" name="level">
+                        <option value="">All</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="filter-area-group">
+                    <label for="price">Price</label>
+                    <select id="price" name="price">
+                        <option value="">All</option>
+                        <option value="free">Free</option>
+                        <option value="low">Under 1 million VND</option>
+                        <option value="mid">1–3 million VND</option>
+                        <option value="high">Over 3 million VND</option>
+                    </select>
+                </div>
+                <div class="filter-area-group">
+                    <label for="duration">Duration</label>
+                        <select id="duration" name="duration">
+                        <option value="">All</option>
+                        <option value="short">Under 1 month</option>
+                        <option value="medium">1–3 months</option>
+                        <option value="long">Over 3 months</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="button" class="btn btn-secondary" id="resetFilters">Reset</button>
+            </div>
+        </form>
+    </section>
+    <!-- End of Filter area -->
+    <!-- Start of Lessons section -->
+    <section id="lessons" class="lessons">
+        <div class="container">
+            <h2 class="lessons-title">Language Lessons</h2>
+            <div class="lessons-list">
+                <div class="lesson-card" data-language="english" data-level="beginner" data-price="low" data-duration="short" data-price-value="900.000 VND" data-duration-value="3 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/lR9SZhPgXKM?si=5_ypIVNJc3BS3T3Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">English for Beginners</h3>
+                    <p class="card-description">Start your journey with basic English communication skills.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="spanish" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.800.000 VND" data-duration-value="6 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/DAp_v7EH9AA?si=uRqKFQvgUaOLNEz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Conversational Spanish</h3>
+                    <p class="card-description">Improve your fluency with real-world conversations in Spanish.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="french" data-level="beginner" data-price="low" data-duration="short" data-price-value="600.000 VND" data-duration-value="3 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/0qIJ5dQ-LYI?si=qh5zKOSvwC8zPmMh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">French for Travel</h3>
+                    <p class="card-description">Learn essential French phrases for travelers and tourists.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="chinese" data-level="beginner" data-price="mid" data-duration="medium" data-price-value="1.500.000 VND" data-duration-value="6 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/FlaJ12tmtu4?si=GvEzEtMoyUn0qWEw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Mandarin Chinese Basics</h3>
+                    <p class="card-description">Build a solid foundation in one of the most spoken languages.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="german" data-level="advanced" data-price="high" data-duration="long" data-price-value="4.200.000 VND" data-duration-value="13 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/UE-n8Mu1PpU?si=f2kPXVCBtrHfiWWD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">German for Professionals</h3>
+                    <p class="card-description">Master business German for the corporate world.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="japanese" data-level="beginner" data-price="mid" data-duration="medium" data-price-value="1.500.000 VND" data-duration-value="8 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/rVuBdObi-D8?si=efiWWxLp2iqG3wyR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Japanese Culture & Language</h3>
+                    <p class="card-description">Explore basic Japanese and cultural nuances for travelers.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="korean" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.700.000 VND" data-duration-value="10 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/LcQ6ME5yPVk?si=3ylI3GZCZVk0KJj3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Korean through K-Dramas</h3>
+                    <p class="card-description">Learn Korean vocabulary and phrases from your favorite dramas.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="italian" data-level="beginner" data-price="low" data-duration="short" data-price-value="800.000 VND" data-duration-value="4 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/EG9x0eevbV4?si=0cPquKYV2eU46TFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Italian for Beginners</h3>
+                    <p class="card-description">Start speaking Italian with common phrases and grammar.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="arabic" data-level="beginner" data-price="mid" data-duration="medium" data-price-value="1.200.000 VND" data-duration-value="6 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/z1nRttWjx6M?si=5plunWBoJDShzsMF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Arabic Essentials</h3>
+                    <p class="card-description">Master the Arabic alphabet and basic conversation skills.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="russian" data-level="intermediate" data-price="high" data-duration="long" data-price-value="3.500.000 VND" data-duration-value="15 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/7sFEx8Z4XQ8?si=6vidgNhnyFevA-wb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Russian for Daily Life</h3>
+                    <p class="card-description">Learn everyday Russian phrases for communication.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="english" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="2.200.000 VND" data-duration-value="9 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/zudrMkqu12g?si=jzWCb8NYQs0GYL_O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">English Conversation Boost</h3>
+                    <p class="card-description">Enhance your English speaking confidence in real situations.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="english" data-level="advanced" data-price="high" data-duration="long" data-price-value="3.300.000 VND" data-duration-value="14 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vWQk67meYUA?si=LXzhXoEtuUUPVW7C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Advanced English Writing</h3>
+                    <p class="card-description">Master academic and business writing skills.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="japanese" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="2.700.000 VND" data-duration-value="11 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/1hTBL59rack?si=9qzG5_enJXlSljQx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">JLPT N4 Prep Course</h3>
+                    <p class="card-description">Get ready for JLPT N4 with structured lessons and practice.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="japanese" data-level="advanced" data-price="high" data-duration="long" data-price-value="3.500.000 VND" data-duration-value="15 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/KjsTmCPFUWQ?si=s39Gqbzry9pLsTCS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Business Japanese Skills</h3>
+                    <p class="card-description">Communicate effectively in Japanese corporate environments.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="korean" data-level="beginner" data-price="low" data-duration="short" data-price-value="700.000 VND" data-duration-value="3 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/LLZLYNp6Nlc?si=J52pxqE8TSN0IySu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Hangul Mastery</h3>
+                    <p class="card-description">Learn to read and write the Korean alphabet quickly.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="korean" data-level="advanced" data-price="high" data-duration="long" data-price-value="3.000.000 VND" data-duration-value="13 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/D2Vh4lUvA-Q?si=zISMn1rM-I1T7-Fs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">TOPIK II Intensive</h3>
+                    <p class="card-description">Prepare for TOPIK II with grammar, reading and writing practice.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="french" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.500.000 VND" data-duration-value="7 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/fflhkR8OnWA?si=agdchrhZ_ZoN7El-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Everyday French Conversation</h3>
+                    <p class="card-description">Speak fluently in casual French situations.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="french" data-level="advanced" data-price="high" data-duration="long" data-price-value="3.300.000 VND" data-duration-value="14 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/g1TFj7sZ5ys?si=iB3Cck0FjBsW8L9t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">French for Work & Business</h3>
+                    <p class="card-description">Learn advanced vocabulary and formal communication.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="spanish" data-level="beginner" data-price="low" data-duration="short" data-price-value="1.000.000 VND" data-duration-value="4 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6_5FnCLLYoA?si=-2oRk6f7gssG_-MG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Spanish Basics 101</h3>
+                    <p class="card-description">Start with greetings, numbers, and daily phrases.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="spanish" data-level="advanced" data-price="high" data-duration="long" data-price-value="3.100.000 VND" data-duration-value="13 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/11FpXVRHeUg?si=YeQrIH8VocVI6O5G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Spanish for Diplomacy</h3>
+                    <p class="card-description">Handle professional and diplomatic conversations in Spanish.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="chinese" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="2.500.000 VND" data-duration-value="10 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/YQuACHX2W2Y?si=iQZTQHfdkQlKh8Iy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Chinese Idioms & Culture</h3>
+                    <p class="card-description">Understand everyday idioms and cultural expressions.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="chinese" data-level="advanced" data-price="high" data-duration="long" data-price-value="5.500.000 VND" data-duration-value="20 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/SWQt5CyoaE0?si=Sjwq3c_6P-aDMRnR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Business Mandarin</h3>
+                    <p class="card-description">Speak confidently in Mandarin business settings.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="german" data-level="beginner" data-price="free" data-duration="short" data-price-value="Free" data-duration-value="3 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/EvDB5Xq-LeQ?si=iJcOkHiz6yp6phwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">German Pronunciation Bootcamp</h3>
+                    <p class="card-description">Perfect your accent and speaking clarity in German.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="german" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.200.000 VND" data-duration-value="8 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/hhuNW1COrSM?si=76VwO5DU-QiDmyUp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">German Conversations</h3>
+                    <p class="card-description">Hold fluent conversations in everyday German.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="italian" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.500.000 VND" data-duration-value="8 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/F4XWtchHCx8?si=JVDuPFYarjiLELxe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Italian in Daily Life</h3>
+                    <p class="card-description">Learn how Italians speak in casual settings.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="italian" data-level="advanced" data-price="high" data-duration="long" data-price-value="3.500.000 VND" data-duration-value="14 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/pYsR7eacx_8?si=J0-ZigwnsbyfYApP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Italian Literature & Art</h3>
+                    <p class="card-description">Dive into Italian classics and artistic expression.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="arabic" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.900.000 VND" data-duration-value="7 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/61ZHwUmMSWA?si=CGUR8PkApXZnwjp5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Arabic Listening Practice</h3>
+                    <p class="card-description">Improve your listening skills with authentic content.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="arabic" data-level="advanced" data-price="high" data-duration="long" data-price-value="4.700.000 VND" data-duration-value="16 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/Ea_wpXWr0jo?si=V-GtbvcvROTgdjeq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Modern Standard Arabic</h3>
+                    <p class="card-description">Master MSA for news, business, and formal contexts.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="russian" data-level="beginner" data-price="low" data-duration="short" data-price-value="900.000 VND" data-duration-value="3 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/5kDpO9T-z60?si=u3BADViEcj6iqzhx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Russian Alphabet Mastery</h3>
+                    <p class="card-description">Quickly learn the Cyrillic alphabet and pronunciation.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="russian" data-level="advanced" data-price="high" data-duration="long" data-price-value="3.200.000 VND" data-duration-value="15 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/bZzNiUkMKvE?si=_JDlmieLlsVzubkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Russian News & Politics</h3>
+                    <p class="card-description">Understand Russian media and formal communication.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="english" data-level="beginner" data-price="low" data-duration="short" data-price-value="800.000 VND" data-duration-value="3 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vLgHJOMo0FA?si=N7mf4Ccl12imr9Aq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Daily English Phrases</h3>
+                    <p class="card-description">Practice useful phrases for everyday conversations.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="english" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="2.200.000 VND" data-duration-value="9 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/w7ZZdVlpOeo?si=ICFEHl2TpfkxauA9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">English Grammar Deep Dive</h3>
+                    <p class="card-description">Clarify tenses, conditionals, and sentence structures.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="english" data-level="advanced" data-price="high" data-duration="long" data-price-value="3.100.000 VND" data-duration-value="14 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/81IED6Vl6GI?si=EuRj9uTFNl5GtaME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Advanced English Idioms</h3>
+                    <p class="card-description">Master idiomatic expressions for native-like fluency.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="french" data-level="beginner" data-price="free" data-duration="short" data-price-value="Free" data-duration-value="2 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/zzGVV5fG6Ec?si=eUqa1II9WBUI9kpl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">French Alphabet & Sounds</h3>
+                    <p class="card-description">Learn how to pronounce French letters and words correctly.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="french" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.600.000 VND" data-duration-value="6 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/SApp5pEtCB4?si=OZlTdACIDkXLJLKq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">French Grammar Focus</h3>
+                    <p class="card-description">Understand gender rules, verb tenses, and sentence structure.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="spanish" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.500.000 VND" data-duration-value="6 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/cYoEz5JWnvc?si=8CA2iU2-xQX8MdHC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Spanish for Healthcare</h3>
+                    <p class="card-description">Communicate effectively with Spanish-speaking patients.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="spanish" data-level="advanced" data-price="high" data-duration="long" data-price-value="3.100.000 VND" data-duration-value="13 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/KhpHcc2B5lA?si=UvvKjYrDxjbflRAa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Latin American Spanish</h3>
+                    <p class="card-description">Explore vocabulary and slang from across Latin America.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="german" data-level="beginner" data-price="low" data-duration="short" data-price-value="900.000 VND" data-duration-value="3 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/0resMskO4Ss?si=hypYQB4M-GvsAJOt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">German for Travelers</h3>
+                    <p class="card-description">Survive travel with essential German phrases and etiquette.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="german" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="2.500.000 VND" data-duration-value="10 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/52asAu2djW0?si=1mRg9fFbmJBN242l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Intermediate German Listening</h3>
+                    <p class="card-description">Sharpen your ear with native speaker dialogues.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="chinese" data-level="beginner" data-price="low" data-duration="short" data-price-value="900.000 VND" data-duration-value="2 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/OewzOCvDYjg?si=D5XMQl2rub4-DikD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Chinese Tones Practice</h3>
+                    <p class="card-description">Master the four tones with guided pronunciation drills.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="chinese" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.500.000 VND" data-duration-value="6 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/NryURgnLdlw?si=9go-oRPVO5bikcJC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Chinese Characters 101</h3>
+                    <p class="card-description">Recognize and write the most common characters.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="arabic" data-level="beginner" data-price="low" data-duration="short" data-price-value="700.000 VND" data-duration-value="3 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/NYQU0_KgWD8?si=HVrZWG5gOeeaVQLR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Arabic Script Reading</h3>
+                    <p class="card-description">Learn how to read and recognize Arabic letters.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="arabic" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.500.000 VND" data-duration-value="8 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/q78eFjZQUow?si=Mvadgelgoc7KxQP8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Arabic for Business</h3>
+                    <p class="card-description">Practice formal Arabic for meetings and presentations.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="russian" data-level="intermediate" data-price="mid" data-duration="medium" data-price-value="1.500.000 VND" data-duration-value="6 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/eVlWiE5JeOU?si=a-_LS-Vls5CU0v-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Russian Speaking Lab</h3>
+                    <p class="card-description">Develop fluency through guided speaking exercises.</p>
+                    <button class="card-button">See More</button>
+                </div>
+                <div class="lesson-card" data-language="italian" data-level="beginner" data-price="free" data-duration="short" data-price-value="Free" data-duration-value="2 weeks">
+                    <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/0Jg07eylrT0?si=FaQoWUPCA-AF9CKO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3 class="card-title">Italian Travel Crash Course</h3>
+                    <p class="card-description">Pack your bags with essential Italian phrases for your trip.</p>
+                    <button class="card-button">See More</button>
+                </div>                
+            </div>
+            <div class="pagination" id="pagination"></div>
+        </div>
+    </section>
+    <div class="lesson-modal hidden" id="lessonModal">
+        <div class="lesson-modal-content">
+            <div class="lesson-video-wrapper"></div>
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+            <ul id="modalDetails"></ul>
+        </div>
+    </div>      
+    <!-- End of Lessons section -->
+</main>

@@ -2,8 +2,8 @@
     "name": "html-css",
     "version": "1.0.0",
     "scripts": {
-        "dev": "parcel src/pages/index.html",
-        "build": "parcel build src/pages/index.html"
+        "dev": "parcel src/pages/home.html",
+        "build": "parcel build src/pages/home.html"
     },
     "keywords": [],
     "author": "NguyenHaiDang",
