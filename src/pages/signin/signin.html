@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../stylesheets/main.scss">
+</head>
+<body>
+    
+    <section class="signin-form">
+        <div class="wrapper">
+            <form action="#">
+                <figure>
+                    <img src="/src/assets/images/home_logo.png" alt="Logo" id="logo">
+                </figure>
+                <div class="input-field">
+                    <input type="text" id="username" required>
+                    <label>Tài Khoản</label>
+                    <div class="field-error"></div>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="email" required>
+                    <label>Email</label>
+                    <div class="field-error"></div>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" required>
+                    <label>Mật khẩu</label>
+                    <div class="field-error"></div>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="confirm-password" required>
+                    <label>Nhập lại mật khẩu</label>
+                    <div class="field-error"></div>
+                </div>
+                <div class="forget">
+                    <label for="remember">
+                        <input type="checkbox" id="remember">
+                        <p>Lưu thông tin</p>
+                    </label>
+                </div>
+                <button type="submit">Đăng ký</button>
+                <div class="register">
+                    <p>Đã có tài khoản? <a href="/src/pages/login/login.html">Đăng nhập</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('.signin-form form');
+            const usernameInput = document.querySelector('#username');
+            const emailInput = document.querySelector('#email');
+            const passwordInput = document.querySelector('#password');
+            const confirmPasswordInput = document.querySelector('#confirm-password');
+            const errorFields = document.querySelectorAll('.field-error');
+            const logo = document.querySelector('#logo');
+
+            // Kiểm tra phần tử tồn tại
+            if (!form || !usernameInput || !emailInput || !passwordInput || !confirmPasswordInput || errorFields.length !== 4 || !logo) {
+                console.error('Không tìm thấy một hoặc nhiều phần tử trong form!');
+                return;
+            }
+
+            // Xử lý click logo
+            logo.addEventListener('click', () => {
+                window.location.href = '/src/pages/main.html';
+            });
+            
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Ngăn submit mặc định
+
+                const username = usernameInput.value.trim();
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+                const confirmPassword = confirmPasswordInput.value;
+
+                // Reset tất cả thông báo lỗi
+                errorFields.forEach(field => {
+                    field.textContent = '';
+                    field.style.display = 'none';
+                });
+
+                let hasError = false;
+
+                // Kiểm tra Tài Khoản
+                if (username === '') {
+                    errorFields[0].textContent = 'Vui lòng nhập Tài Khoản!';
+                    errorFields[0].style.display = 'block';
+                    hasError = true;
+                }
+
+                // Kiểm tra Email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    errorFields[1].textContent = 'Vui lòng nhập Email hợp lệ!';
+                    errorFields[1].style.display = 'block';
+                    hasError = true;
+                }
+
+                // Kiểm tra Mật khẩu
+                if (password.length < 6) {
+                    errorFields[2].textContent = 'Mật khẩu phải có ít nhất 6 ký tự!';
+                    errorFields[2].style.display = 'block';
+                    hasError = true;
+                }
+
+                // Kiểm tra Mật khẩu trùng khớp
+                if (password !== confirmPassword) {
+                    errorFields[3].textContent = 'Mật khẩu và Nhập lại mật khẩu không khớp!';
+                    errorFields[3].style.display = 'block';
+                    hasError = true;
+                }
+
+                // Nếu có lỗi, dừng lại
+                if (hasError) return;
+
+                // Xóa dữ liệu trong các ô input
+                usernameInput.value = '';
+                emailInput.value = '';
+                passwordInput.value = '';
+                confirmPasswordInput.value = '';
+
+                alert('Đăng ký thành công!');
+
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../stylesheets/main.scss">
+</head>
+<body>
+    <section class="login-form">
+        <div class="wrapper">
+            <form action="#">
+                <figure>
+                    <img src="/src/assets/images/home_logo.png" alt="Logo" id="logo">
+                </figure>
+                <div class="input-field">
+                    <input type="text" id="email" required>
+                    <label>Email</label>
+                    <div class="field-error"></div>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" required>
+                    <label>Mật khẩu</label>
+                    <div class="field-error"></div>
+                </div>
+                <div class="forget">
+                    <label for="remember">
+                        <input type="checkbox" id="remember">
+                        <p>Lưu thông tin</p>
+                    </label>
+                    <a href="#">Quên mật khẩu</a>
+                </div>
+                <button type="submit">Đăng nhập</button>
+                <div class="register">
+                    <p class="account">Chưa có tài khoản? <a href="/src/pages/signin/signin.html">Đăng ký</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const logo = document.querySelector('#logo');
+            const form = document.querySelector('.login-form form');
+            const emailInput = document.querySelector('#email');
+            const passwordInput = document.querySelector('#password');
+            const errorFields = document.querySelectorAll('.field-error');
+
+            // Kiểm tra phần tử tồn tại
+            if (!logo || !form || !emailInput || !passwordInput || errorFields.length !== 2) {
+                console.error('Không tìm thấy một hoặc nhiều phần tử!');
+                return;
+            }
+
+            // Xử lý click logo
+            logo.addEventListener('click', () => {
+                window.location.href = '/src/pages/main.html';
+            });
+            
+            // Xử lý form đăng nhập
+            form.addEventListener('submit', (e) => {
+                e.preventDefault(); // Ngăn submit mặc định
+
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+
+                // Reset thông báo lỗi
+                errorFields.forEach(field => {
+                    field.textContent = '';
+                    field.style.display = 'none';
+                });
+
+                let hasError = false;
+
+                // Kiểm tra Email
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    errorFields[0].textContent = 'Vui lòng nhập Email hợp lệ!';
+                    errorFields[0].style.display = 'block';
+                    hasError = true;
+                }
+
+                // Kiểm tra Mật khẩu
+                if (password.length < 6) {
+                    errorFields[1].textContent = 'Mật khẩu phải có ít nhất 6 ký tự!';
+                    errorFields[1].style.display = 'block';
+                    hasError = true;
+                }
+
+                // Nếu có lỗi, dừng lại
+                if (hasError) return;
+
+                // Nếu hợp lệ, chuyển về trang chủ (hoặc xử lý API đăng nhập)
+                window.location.href = '/src/pages/main.html';
+            });
+        });
+    </script>
+
+</body>
+</html>
