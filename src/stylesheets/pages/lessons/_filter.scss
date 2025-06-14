@@ -1,0 +1,78 @@
+@use "../../abstracts/" as *;
+@use "sass:color" as *;
+
+.filter-area {
+    font-family: $primary-font;
+    margin: 0 auto 1rem auto;
+    padding: 1rem;
+    background-color: $background-color;
+    border-radius: 0.5rem;
+    max-width: $mobile;
+    @include tablet {
+        max-width: $tablet;
+        margin: 0 auto;
+    }
+    @include desktop {
+        min-width: $extra-lager;
+        margin: 0 auto;
+    }
+    .filter-area-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+        color: $primary-color;
+    }
+    .filter-area-form {
+        .group {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 1rem;
+            @include tablet {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include desktop {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .filter-area-group {
+                @include flex($direction: column);
+                label {
+                    font-size: 0.9rem;
+                    margin-bottom: 0.25rem;
+                    color: $primary-color;
+                }
+                select {
+                    padding: 0.5rem;
+                    border: 1px solid $secondly-color;
+                    border-radius: 0.25rem;
+                    font-size: 0.9rem;
+                    color: $primary-color;
+                    background-color: $background-color;
+                }
+            }
+        }
+        .btn-group {
+            float: right;
+            .btn {
+                max-width: 6rem;
+                margin-top: 0.5rem;
+                padding: 0.6rem 1rem;
+                color: $background-color;
+                border-radius: 1rem;
+                font-weight: 600;
+            }
+            .btn-primary {
+                background-color: $button-bg;
+                &:hover {
+                    cursor: pointer;
+                    background-color: adjust($button-bg, $lightness: -10%);
+                }
+            }
+            .btn-secondary {
+                background-color: $secondly-color;
+                &:hover {
+                    cursor: pointer;
+                    background-color: adjust($secondly-color, $lightness: -10%);
+                }
+            }
+        }
+    }
+}

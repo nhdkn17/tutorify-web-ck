@@ -10,10 +10,10 @@
             <p class="description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id interdum dui mollis. Suspendisse nulla:
             </p>
-            <button class="cta">Try Free Lessons</button>
+            <button onclick="window.location.href='lessons.html'" class="cta">Try Free Lessons</button>
         </div>
         <figure class="tutor-section">
-            <img src="../assets/images/Group-310.png" alt="Tutor image">
+            <img loading="lazy" src="../assets/images/Group-310.png" alt="Tutor image">
         </figure>
     </section>
     <!-- End of hero section -->
@@ -31,13 +31,13 @@
                         <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reiciendis, error reprehenderit adipisci voluptatem soluta velit, beatae repudiandae pariatur quibusdam unde praesentium commodi? Libero?</p>
                     </div>
                     <div class="offer-flag-child2">
-                        <img class="flag-item" src="../assets/icons/saint-1.svg" alt="France-Flag">
-                        <img class="flag-item" src="../assets/icons/saint-2.svg" alt="China-Flag">
-                        <img class="flag-item" src="../assets/icons/saint-3.svg" alt="Germany-Flag">
-                        <img class="flag-item" src="../assets/icons/saint-4.svg" alt="Japan-Flag">
-                        <img class="flag-item" src="../assets/icons/saint-5.svg" alt="Flag">
-                        <img class="flag-item" src="../assets/icons/saint-6.svg" alt="Flag">
-                        <img class="flag-item" src="../assets/icons/saint-7.png" alt="Spain-Flag">
+                        <img loading="lazy" class="flag-item" src="../assets/icons/saint-1.svg" alt="France-Flag">
+                        <img loading="lazy" class="flag-item" src="../assets/icons/saint-2.svg" alt="China-Flag">
+                        <img loading="lazy" class="flag-item" src="../assets/icons/saint-3.svg" alt="Germany-Flag">
+                        <img loading="lazy" class="flag-item" src="../assets/icons/saint-4.svg" alt="Japan-Flag">
+                        <img loading="lazy" class="flag-item" src="../assets/icons/saint-5.svg" alt="Flag">
+                        <img loading="lazy" class="flag-item" src="../assets/icons/saint-6.svg" alt="Flag">
+                        <img loading="lazy" class="flag-item" src="../assets/icons/saint-7.png" alt="Spain-Flag">
                         <div class="view-all">
                             <p>View All</p>
                             <img src="../assets/icons/arrow-1.svg" alt="Arrow">
@@ -50,12 +50,12 @@
                     <h3>Purchase your awesome lessons and find your tutors</h3>
                     <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem habitant a tincidunt cras accumsan integer suscipit. Libero accumsan eget aliquet.</p>
                     <div class="btn-container">
-                        <button class="btn buy">Book Your Lessons</button>
+                        <button onclick="window.location.href='lessons.html#lessons'" class="btn buy">Book Your Lessons</button>
                         <button class="btn find">Find Your Tutors</button>
                     </div>
                 </div>
                 <div class="circle-container">
-                    <img src="../assets/images/Group-15.png" alt="Main Tutor">
+                    <img loading="lazy" src="../assets/images/Group-15.png" alt="Main Tutor">
                 </div>
             </div>
         </div>
@@ -80,9 +80,15 @@
                         }'></include>
                     </ul>
                 </div>
+                <div class="aim-modal hidden" id="aimModal">
+                    <div class="aim-modal-content">
+                        <span class="aim-modal-close">&times;</span>
+                        <p id="aimModalText"></p>
+                    </div>
+                </div>
             </div>
             <figure class="container-img">
-                <img src="../assets/images/Group 314.png" alt="Person">
+                <img loading="lazy" src="../assets/images/Group 314.png" alt="Person">
             </figure>
         </div>
     </section>
@@ -130,8 +136,43 @@
                 </div>
             </div>
             <figure class="instruction-img">
-                <img src="../assets/images/Group-315.png" alt="video">
+                <img loading="lazy" class="video-thumbnail" src="../assets/images/Group-315.png" alt="video">
             </figure>
+            <div id="videoModal" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <iframe id="modalVideo" width="760" height="415" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            <script>
+                document.querySelectorAll('.video-thumbnail').forEach(img => {
+                    img.addEventListener('click', () => {
+                        const videoId = img.dataset.videoId;
+                        const modal = document.getElementById('videoModal');
+                        const iframe = document.getElementById('modalVideo');
+
+                        iframe.src = `https://www.youtube.com/embed/ZtbQ5luiaTc?si=SOSSJoUFVSS5cYK9&amp;start=75?autoplay=1`;
+
+                        modal.style.display = 'block';
+                    });
+                });
+
+                document.querySelector('.close').addEventListener('click', () => {
+                    const modal = document.getElementById('videoModal');
+                    const iframe = document.getElementById('modalVideo');
+
+                    modal.style.display = 'none';
+                        iframe.src = '';
+                    });
+
+                    window.addEventListener('click', (e) => {
+                    const modal = document.getElementById('videoModal');
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.getElementById('modalVideo').src = '';
+                    }
+                });
+            </script>
         </div>
     </section>
     <!-- End of Instruction section -->
@@ -144,7 +185,7 @@
             </div>
             <div class="about-comment">
                 <figure class="suround">
-                    <img src="../assets/icons/suround.png" alt="suround">
+                    <img loading="lazy" src="../assets/icons/suround.png" alt="suround">
                 </figure>
                 <div class="suround-right">
                     <div class="suround-container">
@@ -159,7 +200,7 @@
                             <p class="description">"With Edu Smart, we can make it easier for you to master a foriegn language, it is important for us to grow and engage with our students</p>
                             <div class="personal-cmt">
                                 <figure>
-                                    <img src="../assets/images/Photo.svg" alt="photo">
+                                    <img loading="lazy" src="../assets/images/Photo.svg" alt="photo">
                                 </figure>
                                 <div class="info">
                                     <p class="name">Jaqoun Hart</p>
@@ -168,7 +209,7 @@
                             </div>
                         </div>
                         <figure class="icon">
-                            <img src="../assets/icons/Group40.svg" alt="photo">
+                            <img loading="lazy" src="../assets/icons/Group40.svg" alt="photo">
                         </figure>
                     </div>
                     <div class="star-list">
@@ -191,7 +232,7 @@
                 <p class="description">Over 100,000 students join us monthly</p>
                 <div class="icon-face">
                     <figure>
-                        <img src="../assets/images/Group-43.png" alt="icon face">
+                        <img loading="lazy" src="../assets/images/Group-43.png" alt="icon face">
                     </figure>
                     <p class="other">and others</p>
                 </div>
