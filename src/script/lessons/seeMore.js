@@ -25,7 +25,7 @@ seeMoreButtons.forEach(btn => {
             modalVideoWrapper.innerHTML = '<p><em>No video available.</em></p>';
         }
 
-        modalTitle.textContent = title;
+        modalTitle.textContent = "Course: " + title;
         modalDescription.textContent = description;
         modalDetails.innerHTML = `
             <li><strong>Language:</strong> ${language}</li>

@@ -8,7 +8,7 @@
                 Languange Tutors
             </h3>
             <p class="description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id interdum dui mollis. Suspendisse nulla:
+                With our experienced online tutors, you can learn anytime, anywhere – right from home. We offer a personalized, effective and flexible learning experience to help you reach your language goals fast.
             </p>
             <button onclick="window.location.href='lessons.html'" class="cta">Try Free Lessons</button>
         </div>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="offer-flag">
                     <div class="offer-flag-child1">
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reiciendis, error reprehenderit adipisci voluptatem soluta velit, beatae repudiandae pariatur quibusdam unde praesentium commodi? Libero?</p>
+                        <p class="description">Explore our vast library of courses in popular languages ​​like French, Chinese, Japanese, German, and more. Whether you're just starting out or looking to improve your skills, we have a program for you.</p>
                     </div>
                     <div class="offer-flag-child2">
                         <img loading="lazy" class="flag-item" src="../assets/icons/saint-1.svg" alt="France-Flag">
@@ -48,7 +48,7 @@
             <div class="purchase">
                 <div class="text-content">
                     <h3>Purchase your awesome lessons and find your tutors</h3>
-                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem habitant a tincidunt cras accumsan integer suscipit. Libero accumsan eget aliquet.</p>
+                    <p class="description">Choose your favorite lessons and connect with the right tutor in just a few easy steps. Learn easily, proactively and effectively – at your own pace and goals.</p>
                     <div class="btn-container">
                         <button onclick="window.location.href='lessons.html#lessons'" class="btn buy">Book Your Lessons</button>
                         <button class="btn find">Find Your Tutors</button>
@@ -68,7 +68,7 @@
                 <div class="text-content">
                     <h3>What Will You <span>Get</span> ?</h3>
                     <p class="description">
-                        Lorem ipsum dolor voluptatibus, adipisicing consectetur <br>amet elit. Rem natus nihil sit <br>accusamus ab!
+                        Unlock your full learning potential with personalized lessons <br>and a supportive global community. Everything you need <br>to learn confidently – all in one place.
                     </p>
                 </div>
                 <div class="aim-content">
@@ -79,12 +79,6 @@
                                     {"contentA": "Take learning beyond the classroom", "contentB": "Learn from certified teachers with proven experience.."}]
                         }'></include>
                     </ul>
-                </div>
-                <div class="aim-modal hidden" id="aimModal">
-                    <div class="aim-modal-content">
-                        <span class="aim-modal-close">&times;</span>
-                        <p id="aimModalText"></p>
-                    </div>
                 </div>
             </div>
             <figure class="container-img">
@@ -99,7 +93,7 @@
             <div class="instruction-content">
                 <div class="text">
                     <h3>Here's is how it <span>work</span></h3>
-                    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt assumenda omnis incidunt, aliquid ipsum ducimus libero sit autem maiores! Nisi.</p>
+                    <p class="description">Getting started is simple. Just find your ideal tutor, book a lesson that fits your schedule, and begin your personalized learning journey—anytime, anywhere.</p>
                 </div>
                 <div class="work">
                     <ul>
@@ -144,35 +138,6 @@
                     <iframe id="modalVideo" width="760" height="415" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
-            <script>
-                document.querySelectorAll('.video-thumbnail').forEach(img => {
-                    img.addEventListener('click', () => {
-                        const videoId = img.dataset.videoId;
-                        const modal = document.getElementById('videoModal');
-                        const iframe = document.getElementById('modalVideo');
-
-                        iframe.src = `https://www.youtube.com/embed/ZtbQ5luiaTc?si=SOSSJoUFVSS5cYK9&amp;start=75?autoplay=1`;
-
-                        modal.style.display = 'block';
-                    });
-                });
-
-                document.querySelector('.close').addEventListener('click', () => {
-                    const modal = document.getElementById('videoModal');
-                    const iframe = document.getElementById('modalVideo');
-
-                    modal.style.display = 'none';
-                        iframe.src = '';
-                    });
-
-                    window.addEventListener('click', (e) => {
-                    const modal = document.getElementById('videoModal');
-                    if (e.target === modal) {
-                        modal.style.display = 'none';
-                        document.getElementById('modalVideo').src = '';
-                    }
-                });
-            </script>
         </div>
     </section>
     <!-- End of Instruction section -->
@@ -238,7 +203,7 @@
                 </div>
             </div>
             <div class="landing-button">
-                <button>Get your free lessons now</button>
+                <button onclick="window.location.href='lessons.html#lessons'">Get your free lessons now</button>
             </div>
         </div>
     </section>

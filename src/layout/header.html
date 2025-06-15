@@ -11,7 +11,7 @@
                           "list":[{"href": "home.html", "text": "Home"},
                                   {"href": "lessons.html", "text": "Lessons"},
                                   {"href": "tutor.html", "text": "Find Tutors"},
-                                  {"href": "#", "text": "About Us"}]
+                                  {"href": "about.html", "text": "About Us"}]
                         }'></include>
                     </ul>
                 </nav>
@@ -22,8 +22,41 @@
                 </div>
             </div>
             <div class="header-menu-item">
-                <a href="#"><img src="/src/assets/icons/ci_hamburger.svg" alt="hamburger icon"></a>
+                <img src="/src/assets/icons/ci_hamburger.svg" alt="hamburger icon">
             </div>
         </div>
     </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <button id="closeMobileMenu" class="close-button">✖</button>
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="tutor.html">Find Tutors</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="/src/pages/login/login.html">Login</a></li>
+            <li><a href="/src/pages/signin/signin.html">Sign Up</a></li>
+        </ul>
+    </nav>
+</div> 
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.querySelector(".header-menu-item img");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeBtn = document.getElementById("closeMobileMenu");
+
+        menuBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            mobileMenu.classList.toggle("active");
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener("click", function () {
+                mobileMenu.classList.remove("active");
+            });
+        }
+    });
+</script>
