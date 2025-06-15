@@ -1,0 +1,145 @@
+@use "../../abstracts/" as *;
+@use "sass:color" as *;
+
+.main-section {
+    max-width: 100%;
+    padding: 1.25rem;
+    margin: 5rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+    .container {
+        @include flex($direction: column, $justify: center, $align: center);
+        margin: 0 auto;
+        max-width: $mobile;
+        gap: 2.5rem;
+        @include tablet {
+            max-width: $tablet;
+        }
+        @include desktop {
+            min-width: $extra-lager;
+        }
+        h2 {
+            font-size: 2rem;
+            color: $secondly-color;
+            margin-bottom: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            @include tablet {
+                font-size: 2.6rem;
+            }
+            @include desktop {
+                font-size: 3rem;
+            }
+        }
+        p {
+            font-size: 1rem;
+            color: adjust($white, $lightness: -50%);
+            margin-bottom: 20px;
+            line-height: 1.5;
+            @include tablet {
+                font-size: 1.1rem;
+            }
+            @include desktop {
+                font-size: 1.2rem;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: unquote("scale(0.95)");
+            }
+            to {
+                opacity: 1;
+                transform: unquote("scale(1)");
+            }
+        }
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1.8rem;
+            @include tablet {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @include desktop {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .mission-card {
+                background: #EEEEEE;
+                padding: 1.25rem;
+                min-height: 10rem;
+                @include tablet {
+                    min-height: 15rem;
+                }
+                @include desktop {
+                    min-height: 15rem;
+                }
+                border-radius: 0.625rem;
+                color: #333;
+                transition: all 0.4s ease;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                @include flex($direction: column, $justify: space-evenly, $align: center);
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                }
+                h3 {
+                    font-size: 1.3rem;
+                    margin-bottom: 0.625rem;
+                    @include desktop {
+                        font-size: 1.5rem;
+                    }
+                }
+                p {
+                    font-size: 0.95rem;
+                    text-align: center;
+                    @include desktop {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .cta {
+            @include flex($justify: center);
+            column-gap: 1rem;
+            .cta-button {
+                padding: 0.625rem 1.25rem;
+                background: $button-bg;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 1.7rem;
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all 0.4s ease;
+                box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+                }
+                &.secondary {
+                    background: $secondly-color;
+                    box-shadow: 0 4px 10px rgba(244, 162, 97, 0.3);
+                    &:hover {
+                        box-shadow: 0 6px 15px rgba(244, 162, 97, 0.4);
+                    }
+                }
+                @include tablet {
+                    padding: 0.7rem 1.4rem;
+                    font-size: 1.05rem;
+                }
+                @include desktop {
+                    padding: 0.75rem 1.625rem;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+#main-section {
+    scroll-margin-top: 80px;
+}

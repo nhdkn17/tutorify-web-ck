@@ -42,6 +42,27 @@
             .footer-nav {
                 @include flex($direction: column, $justify: center);
                 .footer-nav-list {
+                    &.active {
+                        .list-item {
+                            display: block;
+                            animation: fadeIn 0.3s ease-in-out;
+                            margin-left: 2rem;
+                        }
+              
+                        .title img {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-5px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
                     .title {
                         width: 100%;
                         @include flex($justify: space-between, $align: center);

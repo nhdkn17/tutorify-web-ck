@@ -1,1 +1,1 @@
-import './readMore.js';
+import './video.js';

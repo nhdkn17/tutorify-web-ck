@@ -1,0 +1,102 @@
+@use "../../abstracts/" as *;
+@use "sass:color" as *;
+
+.how-it-works {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1.5s ease-out;
+    .container {
+        @include flex($direction: column, $justify: center, $align: center);
+        margin: 0 auto;
+        max-width: $mobile;
+        gap: 2.5rem;
+        @include tablet {
+            max-width: $tablet;
+        }
+        @include desktop {
+            min-width: $extra-lager;
+        }
+        h2 {
+            font-size: 2rem;
+            color: $button-bg;
+            margin-bottom: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            @include tablet {
+                font-size: 2.6rem;
+            }
+            @include desktop {
+                font-size: 3rem;
+            }
+        }
+        p {
+            font-size: 1rem;
+            color: adjust($white, $lightness: -50%);
+            margin-bottom: 20px;
+            line-height: 1.5;
+            @include tablet {
+                font-size: 1.1rem;
+            }
+            @include desktop {
+                font-size: 1.2rem;
+            }
+        }
+        .work-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1.8rem;
+            @include tablet {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @include desktop {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .work-item {
+                background: #EEEEEE;
+                padding: 1.25rem;
+                min-height: 10rem;
+                @include tablet {
+                    min-height: 15rem;
+                }
+                @include desktop {
+                    min-height: 15rem;
+                }
+                border-radius: 0.625rem;
+                color: #333;
+                text-align: left;
+                transition: all 0.4s ease;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                @include flex($direction: column, $justify: space-evenly, $align: center);
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                }
+                .content-title {
+                    font-size: 1.3rem;
+                    margin-bottom: 0.625rem;
+                    @include desktop {
+                        font-size: 1.5rem;
+                    }
+                }
+                .content-description {
+                    font-size: 0.95rem;
+                    text-align: center;
+                    @include desktop {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#how-it-works {
+    scroll-margin-top: 80px;
+}
+  

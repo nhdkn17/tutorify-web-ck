@@ -51,6 +51,7 @@
                 transition: transform 0.3s ease;
                 &:hover {
                     transform: translateY(-5px);
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
                 }
                 iframe {
                     display: none;
@@ -82,6 +83,7 @@
                     &:hover {
                         cursor: pointer;
                         background-color: adjust($button-bg, $lightness: -10%);
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
                     }
                 }
             }          
@@ -128,6 +130,10 @@
         width: 90%;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         position: relative;
+        h3 {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
         .close-btn {
             position: absolute;
             top: 0.5rem;
@@ -135,6 +141,36 @@
             font-size: 2rem;
             cursor: pointer;
             color: adjust($primary-color, $lightness: 20%);
+        }
+        .btn-group {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: fit-content;
+            @include flex($direction: column);
+            gap: 0.7rem;
+            .btn {
+                padding: 0.5rem 0.8rem;
+                color: $white;
+                border-radius: 0.6rem;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                }
+            }
+            .btn-save {
+                background-color: $secondly-color;
+                &:hover {
+                    background-color: adjust($secondly-color, $lightness: -20%);
+                    
+                }
+            }
+            .btn-enroll {
+                background-color: $button-bg;
+                &:hover {
+                    background-color: adjust($button-bg, $lightness: -10%);
+                }
+            }
         }
     }
 }
